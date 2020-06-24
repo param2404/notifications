@@ -18,7 +18,7 @@ const notificationBody = {
     "notification": {
         "title": 'Notification title',
         "body": 'This is notification body.',
-        "icon": "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png",
+        "icon": "./image/logo.png",
         'sound': 'dog-barking-2054.mp3',
         'click_action':'https://github.com/param2404'
     }

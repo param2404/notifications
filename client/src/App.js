@@ -23,7 +23,7 @@ function App() {
         }).catch((err)=>console.log(err))
       })
       .catch(function (err) {
-        // console.log(err)
+        console.log(err)
         console.log('Error Occured')
       })
 
