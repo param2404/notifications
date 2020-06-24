@@ -14,15 +14,22 @@ const notification_options = {
     timeToLive: 60 * 60 * 24
 };
 
-const notificationBody = { "notification": { "title": 'Notification title', "body": 'This is notification body.', "icon": "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png", 'sound': 'dog-barking-2054.mp3' }}
-
+const notificationBody = {
+    "notification": {
+        "title": 'Notification title',
+        "body": 'This is notification body.',
+        "icon": "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png",
+        'sound': 'dog-barking-2054.mp3',
+        'click_action':'https://github.com/param2404'
+    }
+}
 
 app.post('/firebase/notification', (req, res) => {
     const registrationToken = req.body.fcmToken
     const notification = notificationBody
     const options = notification_options
 
-    admin.messaging().sendToDevice(registrationToken, notification, options)
+    admin.messaging().sendToDevice(registrationToken, notification,options)
         .then(response => {
 
             res.status(200).send(response)
